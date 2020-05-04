@@ -42,7 +42,7 @@ Outlaw.TextureMap = {
 
 function Outlaw:OnEvent()
 	for i = 1, 6 do
-		Name, _, Count, _, Duration, Expiration = UnitAuraByName("player", self.BuffNames[i])
+		Name, _, Count, _, Duration, Expiration = FindAuraByName("player", self.BuffNames[i])
 		
 		if (Name and Expiration) then
 			self.RollTheBones[i].Icon:SetDesaturated(false)
